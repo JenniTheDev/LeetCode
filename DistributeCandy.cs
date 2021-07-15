@@ -9,12 +9,10 @@
   return the maximum number of different types of candies she can eat if she only eats n / 2 of them.
 */
 
-namespace DistributeCandies {
-    internal class Program {
+namespace LeetCode {
+    
 
-        private static void Main(string[] args) {
-            // Some backend LeetCode Stuff here
-        }
+       
 
         public class Solution {
 
@@ -35,5 +33,5 @@ namespace DistributeCandies {
                 } else return 0;
             }
         }
-    }
+    
 }

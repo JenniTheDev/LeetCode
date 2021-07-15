@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace MayPrefixSuffixSearch {
+namespace LeetCode{
     public class WordFilter {
         // A trie is a prefix search tree with links between nodes defined by individual letters
 

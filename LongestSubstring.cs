@@ -4,7 +4,8 @@
 using System;
 using System.Collections.Generic;
 
-public class Solution {
+namespace LeetCode {
+    public class Solution {
     public int LengthOfLongestSubstring(string s) {
         if (string.IsNullOrEmpty(s)) {
             return 0;
@@ -33,3 +34,6 @@ public class Solution {
 
     }
 }
+
+
+

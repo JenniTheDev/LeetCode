@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedianFinder {
+namespace LeetCode {
     internal class MedianFinder {
         private List<int> listOfNums;
 

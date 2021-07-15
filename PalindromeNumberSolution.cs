@@ -2,7 +2,7 @@
 
 // https://leetcode.com/problems/palindrome-number/
 
-namespace PalindromeNumber {
+namespace LeetCode{
     internal class PalindromeNumberSolution {
         public bool IsPalindrome(int x) {
             if (x < 0) {
