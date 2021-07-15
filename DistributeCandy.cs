@@ -9,12 +9,14 @@
   return the maximum number of different types of candies she can eat if she only eats n / 2 of them.
 */
 
+using System.Collections.Generic;
+
 namespace LeetCode {
     
 
        
 
-        public class Solution {
+        public class DistributeCandy {
 
             public int DistributeCandies(int[] candyType) {
                 int numToEat = candyType.Length;
