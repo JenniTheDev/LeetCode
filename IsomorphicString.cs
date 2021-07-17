@@ -8,21 +8,33 @@ using System.Threading.Tasks;
 
 namespace LeetCode {
     public class IsomorphicString {
-        public Dictionary<char, char> letterPairs = new Dictionary<char, char>();
+       
         public bool IsIsomorphic(string s, string t) {
-            if (s.Length != t.Length) {
-                return false;
-            }
+            var chars = new Dictionary<char, char>();
+            char firstChar, secondChar;
+            bool isFirstCharInKeys;
 
             for (int i = 0; i < s.Length; i++) {
-                if (letterPairs.TryAdd(s[i], t[i]) == false) {
-                    if (letterPairs[s[i]] != t[i] )
-                    return false;    
+                firstChar = s[i];
+                secondChar = t[i];
+                isFirstCharInKeys = IsFirstCharInKeys(ref chars, firstChar);
+
+                if (!isFirstCharInKeys && !chars.ContainsValue(secondChar)) {
+                    chars.Add(firstChar, secondChar);
+                } else if (!isFirstCharInKeys || chars[firstChar] != secondChar) {
+                    return false;
                 }
             }
+
             return true;
         }
+
+        private bool IsFirstCharInKeys(ref Dictionary<char, char> chars, char firstChar) {
+            return chars.ContainsKey(firstChar);
+        }
+
     }
+    
 }
 
     
