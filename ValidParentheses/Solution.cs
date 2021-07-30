@@ -6,59 +6,31 @@ using System.Threading.Tasks;
 
 namespace ValidParentheses {
     class Solution {
-        List<char> parChecker = new List<char>();
         public bool IsValid(string s) {
+            var pairDict = new Dictionary<char, char>();
+            pairDict.Add('(', ')');
+            pairDict.Add('[', ']');
+            pairDict.Add('{', '}');
 
-            for (int b = 0; b < s.Length; b++) {
-                parChecker.Add(s[b]);
-                CheckForPair();
+            Stack<char> bracketsChecked = new Stack<char>();
+
+            for (int i = 0; i < s.Length; i++) {
+                if (pairDict.ContainsKey(s[i])) {
+                    bracketsChecked.Push(s[i]);
+                } else {
+                    if (bracketsChecked.Count == 0) {
+                        return false;
+                    }
+                    if (pairDict[bracketsChecked.Peek()] == s[i]) {
+                        bracketsChecked.Pop();
+                    } else {
+                        return false;
+                    }
+                }
             }
-
-            if (parChecker.Count == 0) {
+            if (bracketsChecked.Count == 0) {
                 return true;
-            } else {
-                return false;
-            }
-        }
-
-        private void CheckForPair() {
-            int first;
-            for (int i = 0; i < parChecker.Count; i++) {
-                if (i == '{') {
-                    first = i;
-                    for (int j = i; j < parChecker.Count; j++) {
-                        if (j == '}') {
-                            parChecker.Remove(parChecker[first]);
-                            parChecker.Remove(parChecker[j]);
-                        }
-                    }
-                }
-
-                for (int i = 0; i < parChecker.Count; i++) {
-                    if (i == '[') {
-                        first = i;
-                        for (int j = i; j < parChecker.Count; j++) {
-                            if (j == ']') {
-                                parChecker.Remove(parChecker[first]);
-                                parChecker.Remove(parChecker[j]);
-                            }
-                        }
-                    }
-                }
-
-                for (int i = 0; i < parChecker.Count; i++) {
-                    if (i == '(') {
-                        first = i;
-                        for (int j = i; j < parChecker.Count; j++) {
-                            if (j == ')') {
-                                parChecker.Remove(parChecker[first]);
-                                parChecker.Remove(parChecker[j]);
-                            }
-                        }
-                    }
-                }
-
-            }
+            } else return false;
         }
     }
 }
