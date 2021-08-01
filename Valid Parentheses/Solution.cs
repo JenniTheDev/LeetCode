@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ValidParentheses {
-    class Solution {
+    internal class Solution {
+
         public bool IsValid(string s) {
             var pairDict = new Dictionary<char, char>();
             pairDict.Add('(', ')');

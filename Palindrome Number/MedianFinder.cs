@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 // https://leetcode.com/problems/palindrome-number/
 
-namespace LeetCode{
-    internal class PalindromeNumberSolution {
+namespace Palindrome_Number {
+    internal class MedianFinder {
+
         public bool IsPalindrome(int x) {
             if (x < 0) {
                 return false;

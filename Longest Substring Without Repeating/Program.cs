@@ -1,8 +1,9 @@
 ﻿using System;
 
 namespace LongestSubstringWithoutRepeating {
-    class Program {
-        static void Main(string[] args) {
+    internal class Program {
+
+        private static void Main(string[] args) {
             Solution substringTest = new Solution();
 
             string exampleOne = "abcabcbb";
