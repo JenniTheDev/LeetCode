@@ -12,14 +12,26 @@ namespace _4Sum {
 
         public IList<IList<int>> FourSum(int[] nums, int target) {
             for (int i = 0; i < nums.Length; i++) {
-                // maybe subtract a number from the target, then another number, and eliminate numbers that are larger then the remainder of the target?
-                // loop through all possibilities of 4 number groups and brute force it
+                for (int j = 1; j < nums.Length - 1; j++) {
+                    for (int k = 2; k < nums.Length - 2; k++) {
+                        for (int l = 3; l < nums.Length - 3; l++) {
+                            if (IsNumbersEqual(nums[i], nums[j], nums[k], nums[l], target) == true) {
+                                IList<int> numsToAdd = new List<int>();
+                                numsToAdd.Add(nums[i]);
+                                numsToAdd.Add(nums[j]);
+                                numsToAdd.Add(nums[k]);
+                                numsToAdd.Add(nums[l]);
+                                numsThatSum.Add(numsToAdd);
+                            }
+                        }
+                    }
+                }
             }
-            // when the four numbers are equal, put in a list and add to the numsThatSum
 
             return numsThatSum;
         }
 
+        // if this is true, make list of numbers, add list to list
         private bool IsNumbersEqual(int nOne, int nTwo, int nThree, int nFour, int shouldEqual) {
             return nOne + nTwo + nThree + nFour == shouldEqual;
         }

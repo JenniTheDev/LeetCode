@@ -4,7 +4,7 @@ namespace Palindrome_Number {
     internal class Program {
 
         private static void Main(string[] args) {
-            MedianFinder solution = new MedianFinder();
+            Solution solution = new Solution();
 
             int exOne = 121;
             Console.WriteLine($"Should be true: {solution.IsPalindrome(exOne)}");

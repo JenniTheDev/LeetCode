@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // https://leetcode.com/problems/palindrome-number/
 
 namespace Palindrome_Number {
-    internal class MedianFinder {
+    internal class Solution {
 
         public bool IsPalindrome(int x) {
             if (x < 0) {
