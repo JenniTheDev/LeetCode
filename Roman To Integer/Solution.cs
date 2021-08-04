@@ -9,7 +9,7 @@ namespace Roman_To_Integer {
     internal class Solution {
 
         public int RomanToInt(string s) {
-            readonly var romanNums = new Dictionary<char, int> {
+            var romanNums = new Dictionary<char, int> {
                 {'I', 1 },
                 {'V', 5 },
                 {'X', 10 },
