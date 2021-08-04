@@ -19,36 +19,20 @@ namespace Roman_To_Integer {
                 {'M', 1000 }
             };
 
-            var specialCases = new HashSet<char>() {
-                'V', 'X', 'L', 'C', 'D', 'M'
-            };
-
-            int total = 0;
+            // int total = 0;
             s.ToCharArray();
 
-            for (int i = 0; i < s.Length; i++) {
-                if (s[i] == 'I' || s[i] == 'X' || s[i] == 'C') {
-                    if (IsAtTheEnd(s.Length, i) == false && IsSpecialCase(s[i + 1], specialCases) == true) {
-                        total = romanNumDict[s[i + 1]] - romanNumDict[s[i]];
-                        i++; // needs to skip the s[i+1] that was added
-                    }
+            int prevNum = romanNumDict[s[s.Length - 1]];
+            int total = prevNum;
+            for (int i = s.Length - 2; i >= 0; i--) {
+                if (romanNumDict[s[i]] < prevNum) {
+                    total -= prevNum;
                 } else {
-                    total = +romanNumDict[s[i]];
+                    total += romanNumDict[s[i]];
                 }
+                prevNum = romanNumDict[s[i]];
             }
             return total;
-        }
-
-        private bool IsSpecialCase(char toCheck, HashSet<char> spCases) {
-            if (spCases.Contains(toCheck)) {
-                return true;
-            } else return false;
-        }
-
-        private bool IsAtTheEnd(int length, int index) {
-            if (length - 1 == index) {
-                return true;
-            } else return false;
         }
     }
 }
