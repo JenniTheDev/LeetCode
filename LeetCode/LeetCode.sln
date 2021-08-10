@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Top K Frequent Words", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman To Integer", "..\Roman To Integer\Roman To Integer.csproj", "{DB85A458-E66B-43F4-B1E9-029C571E84B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add Two Numbers", "..\Add Two Numbers\Add Two Numbers.csproj", "{D470D25D-8752-4520-9E39-29D25E942C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Two Numbers", "..\Add Two Numbers\Add Two Numbers.csproj", "{D470D25D-8752-4520-9E39-29D25E942C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add Strings", "..\Add Strings\Add Strings.csproj", "{41DB13A5-C419-483B-B0C1-6A1EB2677331}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{D470D25D-8752-4520-9E39-29D25E942C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D470D25D-8752-4520-9E39-29D25E942C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D470D25D-8752-4520-9E39-29D25E942C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41DB13A5-C419-483B-B0C1-6A1EB2677331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41DB13A5-C419-483B-B0C1-6A1EB2677331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41DB13A5-C419-483B-B0C1-6A1EB2677331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41DB13A5-C419-483B-B0C1-6A1EB2677331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
