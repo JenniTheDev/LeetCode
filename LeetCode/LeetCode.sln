@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman To Integer", "..\Roma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Two Numbers", "..\Add Two Numbers\Add Two Numbers.csproj", "{D470D25D-8752-4520-9E39-29D25E942C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add Strings", "..\Add Strings\Add Strings.csproj", "{41DB13A5-C419-483B-B0C1-6A1EB2677331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Strings", "..\Add Strings\Add Strings.csproj", "{41DB13A5-C419-483B-B0C1-6A1EB2677331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valid Palindrome", "..\Valid Palindrome\Valid Palindrome.csproj", "{D26D9FF8-7934-4B73-8352-6FA508D5542D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{41DB13A5-C419-483B-B0C1-6A1EB2677331}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41DB13A5-C419-483B-B0C1-6A1EB2677331}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41DB13A5-C419-483B-B0C1-6A1EB2677331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26D9FF8-7934-4B73-8352-6FA508D5542D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26D9FF8-7934-4B73-8352-6FA508D5542D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26D9FF8-7934-4B73-8352-6FA508D5542D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26D9FF8-7934-4B73-8352-6FA508D5542D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
