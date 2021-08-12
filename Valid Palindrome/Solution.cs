@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
+// https://leetcode.com/problems/valid-palindrome/
 namespace Valid_Palindrome {
     internal class Solution {
-        private const string pattern = @"[\[\]\{\}\(\),`~'\;.:@?!#$%""^*\-_]";
+        private const string pattern = @"[\[\]\{\}\(\),`~'\;.:@?!#$%""^*\-_ ]";
 
         public bool IsPalindrome(string s) {
             s = s.ToLower();  // all to lower case
