@@ -15,27 +15,24 @@ namespace Merge_Two_Sorted_Lists {
 
         public ListNode MergeTwoLists(ListNode l1, ListNode l2) {
             ListNode mergedList = new ListNode();
-            ListNode temp = new ListNode();
+            ListNode temp = mergedList;
+            if (l1 == null & l2 == null) { return null; }
+            if (l1 == null) { return l2; }
+            if (l2 == null) { return l1; }
 
-            while (l1.next != null && l2.next != null) {
-                if (l1.val == l2.val) {
-                    temp.next = l1.next;
-                    l1.next = l2;
-                    l2.next = temp;
+            while (l1 != null && l2 != null) {
+                if (l1.val <= l2.val) {
+                    temp.next = l1;
+                    l1 = l1.next;
+                } else {
+                    temp.next = l2;
+                    l2 = l2.next;
                 }
-                if (l1.val < l2.val) {
-                    l1.next = temp;
-                    l1.next = l2;
-                    l2.next = temp;
-                }
-                if (l1.val > l2.val) {
-                    l2.next = temp;
-                    l2.next = l1;
-                    l1.
-                }
+                temp = temp.next;
             }
+            temp.next = l1 == null ? l2 : l1;
 
-            return mergedList;
+            return mergedList.next;
         }
     }
 }
