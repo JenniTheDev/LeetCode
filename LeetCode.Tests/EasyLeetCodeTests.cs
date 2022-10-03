@@ -40,5 +40,19 @@ namespace LeetCodeTests
             yield return new object[] { true, "()[]{}" };
             yield return new object[] { false, "(]" };
         }
+
+        [Theory]
+        [MemberData(nameof(RomanToIntData))]
+        public void RomanToIntTest(int expected, string s)
+        {
+            Assert.Equal(expected, RomanToInteger.Solve.RomanToInt(s));
+        }
+
+        public static IEnumerable<object[]> RomanToIntData()
+        {
+            yield return new object[] { 3, "III" };
+            yield return new object[] { 58, "LVIII" };
+            yield return new object[] { 1994, "MCMXCIV" };
+        }
     }
 }

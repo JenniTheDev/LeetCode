@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// https://leetcode.com/problems/roman-to-integer/
 
-// https://leetcode.com/problems/roman-to-integer/
 namespace LeetCode
 {
-    internal class RomanToInteger
+    public static class RomanToInteger
     {
-        public int RomanToInt(string s)
+        public static Solution Solve { get; } = new();
+
+        public class Solution
         {
-            var romanNums = new Dictionary<char, int> {
+            public int RomanToInt(string s)
+            {
+                var romanNums = new Dictionary<char, int> {
                 {'I', 1 },
                 {'V', 5 },
                 {'X', 10 },
@@ -21,24 +20,25 @@ namespace LeetCode
                 {'M', 1000 }
             };
 
-            // int total = 0;
-            s.ToCharArray();
+                // int total = 0;
+                s.ToCharArray();
 
-            int prevNum = romanNums[s[s.Length - 1]];
-            int total = prevNum;
-            for (int i = s.Length - 2; i >= 0; i--)
-            {
-                if (romanNums[s[i]] < prevNum)
+                int prevNum = romanNums[s[s.Length - 1]];
+                int total = prevNum;
+                for (int i = s.Length - 2; i >= 0; i--)
                 {
-                    total -= romanNums[s[i]];
+                    if (romanNums[s[i]] < prevNum)
+                    {
+                        total -= romanNums[s[i]];
+                    }
+                    else
+                    {
+                        total += romanNums[s[i]];
+                    }
+                    prevNum = romanNums[s[i]];
                 }
-                else
-                {
-                    total += romanNums[s[i]];
-                }
-                prevNum = romanNums[s[i]];
+                return total;
             }
-            return total;
         }
     }
 }
