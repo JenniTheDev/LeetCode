@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LeetCode.App\LeetCode.App.csproj" />
+  </ItemGroup>
+
 </Project>
